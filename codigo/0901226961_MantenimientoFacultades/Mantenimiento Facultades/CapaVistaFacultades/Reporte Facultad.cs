@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaVistaFacultades
 {
-    public partial class Reporte : Form
+    public partial class Reporte_Facultad : Form
     {
-        public Reporte()
+        public Reporte_Facultad()
         {
             InitializeComponent();
         }

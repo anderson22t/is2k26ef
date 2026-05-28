@@ -13,7 +13,7 @@ namespace Capa_Modelo_Reporteador
         
         public OdbcConnection conexion()
         {
-            OdbcConnection conn = new OdbcConnection("Dsn=bd_SIG");
+            OdbcConnection conn = new OdbcConnection("Dsn=examen_final");
             try
             {
                 conn.Open();

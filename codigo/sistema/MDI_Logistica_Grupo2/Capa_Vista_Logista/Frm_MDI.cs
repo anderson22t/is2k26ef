@@ -100,11 +100,11 @@ namespace Capa_Vista_Logista
             Dictionary<int, ToolStripMenuItem> mapaProcesos = new Dictionary<int, ToolStripMenuItem>
             {
                 
-                //{802, consultaDeInventariosToolStripMenuItem_Click},
+                
             };
             Dictionary<int, ToolStripMenuItem> mapaReportes = new Dictionary<int, ToolStripMenuItem>
             {
-                {800, componenteReportesToolStripMenuItem}
+                {803, componenteReportesToolStripMenuItem}
             };
 
 
@@ -159,7 +159,7 @@ namespace Capa_Vista_Logista
 
             menuItems[MenuOpciones.Catalogos].Enabled = mapaCatalogos.Values.Any(m => m.Enabled);
             menuItems[MenuOpciones.Procesos].Enabled = mapaProcesos.Values.Any(m => m.Enabled);
-            menuItems[MenuOpciones.Reportes].Enabled = mapaProcesos.Values.Any(m => m.Enabled);
+            menuItems[MenuOpciones.Reportes].Enabled = mapaReportes.Values.Any(m => m.Enabled);
         }
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
