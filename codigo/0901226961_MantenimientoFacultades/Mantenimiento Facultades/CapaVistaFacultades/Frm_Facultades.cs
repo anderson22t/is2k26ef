@@ -40,7 +40,7 @@ namespace CapaVistaFacultades
                  "Estatus Facultad"
              };
 
-            int id_aplicacion = 720;
+            int id_aplicacion = 770;
             int id_modulo = 5;
 
             navegador1.IPkId_Aplicacion = id_aplicacion;

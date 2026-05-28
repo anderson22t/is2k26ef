@@ -552,8 +552,8 @@ namespace Capa_Vista_Navegador
                 // Ruta a la carpeta ManualNavegador
                 string rutaAyuda = Path.Combine(
                     rutaDll,
-                    "ManualNavegador",
-                    "Ayuda_Navegador.chm"
+                    "Ayudas Mantenimiento",
+                    "Ayuda Mantenimiento.chm"
                 );
 
                 if (!File.Exists(rutaAyuda))
@@ -570,7 +570,7 @@ namespace Capa_Vista_Navegador
                 Help.ShowHelp(
                     this,
                     rutaAyuda,
-                    "Manual_De_Usuario_Navegador.html"
+                    "ayudaEstadoFase.html"
                 );
             }
             catch (Exception ex)
