@@ -47,6 +47,7 @@
             this.crearUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoAplicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignaciónPermisoAplicaciónAUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoFacultadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Pnl_Superior.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -113,6 +114,8 @@
             // 
             // catálogosToolStripMenuItem
             // 
+            this.catálogosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mantenimientoFacultadesToolStripMenuItem});
             this.catálogosToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
             this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
@@ -214,6 +217,13 @@
             this.asignaciónPermisoAplicaciónAUsuarioToolStripMenuItem.Text = "Asignación permiso aplicación a usuario";
             this.asignaciónPermisoAplicaciónAUsuarioToolStripMenuItem.Click += new System.EventHandler(this.asignaciónPermisoAplicaciónAUsuarioToolStripMenuItem_Click);
             // 
+            // mantenimientoFacultadesToolStripMenuItem
+            // 
+            this.mantenimientoFacultadesToolStripMenuItem.Name = "mantenimientoFacultadesToolStripMenuItem";
+            this.mantenimientoFacultadesToolStripMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.mantenimientoFacultadesToolStripMenuItem.Text = "Mantenimiento Facultades";
+            this.mantenimientoFacultadesToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoFacultadesToolStripMenuItem_Click);
+            // 
             // Frm_MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -265,5 +275,6 @@
         private System.Windows.Forms.ToolStripMenuItem crearUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoAplicacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignaciónPermisoAplicaciónAUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoFacultadesToolStripMenuItem;
     }
 }
