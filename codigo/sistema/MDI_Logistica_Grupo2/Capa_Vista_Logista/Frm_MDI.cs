@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Capa_Vista_Seguridad;
 using Capa_Controlador_Seguridad;
 using System.Drawing.Imaging;
+using Capa_Vista_Reporteador;
 
 
 namespace Capa_Vista_Logista
@@ -166,6 +167,49 @@ namespace Capa_Vista_Logista
             this.Hide();
             Frm_LOGIN login = new Frm_LOGIN();
             login.ShowDialog();
+            this.Close();
+        }
+
+        private void componenteReportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Reportes reportes = new Frm_Reportes();
+            reportes.ShowDialog();
+            this.Close();
+        }
+
+        private void consultaBitácoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Bitacora bitacora = new Frm_Bitacora();
+            bitacora.ShowDialog();
+            this.Close();
+        }
+
+        private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_cambiar_contrasena contrasena = new Frm_cambiar_contrasena(Cls_Usuario_Conectado.iIdUsuario);
+            contrasena.ShowDialog();
+            this.Close();
+
+        }
+
+        private void crearUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Usuario usuario = new Frm_Usuario();
+            usuario.ShowDialog();
+            this.Close();
+        }
+
+        private void asignaciónPermisoAplicaciónAUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_asignacion_aplicacion_usuario aplicacion = new Frm_asignacion_aplicacion_usuario();
+            aplicacion.ShowDialog();
+            this.Close();
+        }
+
+        private void mantenimientoAplicacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAplicacion crearAplicacion = new FrmAplicacion();
+            crearAplicacion.ShowDialog();
             this.Close();
         }
     }
