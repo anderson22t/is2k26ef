@@ -11,6 +11,7 @@ using Capa_Vista_Seguridad;
 using Capa_Controlador_Seguridad;
 using System.Drawing.Imaging;
 using Capa_Vista_Reporteador;
+using CapaVistaFacultades;
 
 
 namespace Capa_Vista_Logista
@@ -91,20 +92,19 @@ namespace Capa_Vista_Logista
             // CATÁLOGOS: 700-709
             Dictionary<int, ToolStripMenuItem> mapaCatalogos = new Dictionary<int, ToolStripMenuItem>
             {
-                //{708, cuentasPorPagarToolStripMenuItem}
-                
+                {800, mantenimientoFacultadesToolStripMenuItem}
+
             };
 
             // PROCESOS: 710-734 (agregar cuando estén listos)
             Dictionary<int, ToolStripMenuItem> mapaProcesos = new Dictionary<int, ToolStripMenuItem>
             {
                 
-                //{730, consultaDeInventariosToolStripMenuItem_Click},
+                //{802, consultaDeInventariosToolStripMenuItem_Click},
             };
             Dictionary<int, ToolStripMenuItem> mapaReportes = new Dictionary<int, ToolStripMenuItem>
             {
-                //{733, balanceDeAntiguedadToolStripMenuItem },
-
+                {803, componenteReportesToolStripMenuItem}
             };
 
 
@@ -119,7 +119,7 @@ namespace Capa_Vista_Logista
                 int idModulo = Convert.ToInt32(row["iFk_id_modulo"]);
                 int idAplicacion = Convert.ToInt32(row["iFk_id_aplicacion"]);
 
-                if (idModulo == 44 && idAplicacion >= 700 && idAplicacion <= 734)
+                if (idModulo == 5 && idAplicacion >= 700 && idAplicacion <= 900)
                 {
                     if (mapaCatalogos.ContainsKey(idAplicacion))
                         mapaCatalogos[idAplicacion].Enabled = true;
@@ -141,7 +141,7 @@ namespace Capa_Vista_Logista
                 int idModulo = Convert.ToInt32(row["iFk_id_modulo"]);
                 int idAplicacion = Convert.ToInt32(row["iFk_id_aplicacion"]);
 
-                if (idModulo == 44 && idAplicacion >= 700 && idAplicacion <= 734)
+                if (idModulo == 5 && idAplicacion >= 700 && idAplicacion <= 900)
                 {
                     if (mapaCatalogos.ContainsKey(idAplicacion))
                         mapaCatalogos[idAplicacion].Enabled = true;
@@ -172,6 +172,7 @@ namespace Capa_Vista_Logista
 
         private void componenteReportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Frm_Reportes reportes = new Frm_Reportes();
             reportes.ShowDialog();
             this.Close();
@@ -179,6 +180,7 @@ namespace Capa_Vista_Logista
 
         private void consultaBitácoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Frm_Bitacora bitacora = new Frm_Bitacora();
             bitacora.ShowDialog();
             this.Close();
@@ -186,6 +188,7 @@ namespace Capa_Vista_Logista
 
         private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Frm_cambiar_contrasena contrasena = new Frm_cambiar_contrasena(Cls_Usuario_Conectado.iIdUsuario);
             contrasena.ShowDialog();
             this.Close();
@@ -194,6 +197,7 @@ namespace Capa_Vista_Logista
 
         private void crearUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Frm_Usuario usuario = new Frm_Usuario();
             usuario.ShowDialog();
             this.Close();
@@ -201,6 +205,7 @@ namespace Capa_Vista_Logista
 
         private void asignaciónPermisoAplicaciónAUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Frm_asignacion_aplicacion_usuario aplicacion = new Frm_asignacion_aplicacion_usuario();
             aplicacion.ShowDialog();
             this.Close();
@@ -208,8 +213,17 @@ namespace Capa_Vista_Logista
 
         private void mantenimientoAplicacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FrmAplicacion crearAplicacion = new FrmAplicacion();
             crearAplicacion.ShowDialog();
+            this.Close();
+        }
+
+        private void mantenimientoFacultadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide(); 
+            Frm_Facultades facultades = new Frm_Facultades();
+            facultades.ShowDialog();
             this.Close();
         }
     }

@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CapaVistaFacultades
+{
+    public partial class Frm_Facultades : Form
+    {
+        public Frm_Facultades()
+        {
+            InitializeComponent();
+            //parametros para navegador
+            Capa_Controlador_Navegador.Cls_ConfiguracionDataGridView config = new Capa_Controlador_Navegador.Cls_ConfiguracionDataGridView
+            {
+                Ancho = 1100,
+                Alto = 200,
+                PosX = 10,
+                PosY = 300,
+                ColorFondo = Color.AliceBlue,
+                TipoScrollBars = ScrollBars.Both,
+                Nombre = "dgv_empleados"
+            };
+
+            string[] columnas = {
+                 "facultades",
+                 "codigo_facultad",
+                 "nombre_facultad",
+                 "estatus_facultad"
+             };
+
+            string[] sEtiquetas = {
+                 "Codigo",
+                 "Nombre Facultad",
+                 "Estatus Facultad"
+             };
+
+            int id_aplicacion = 720;
+            int id_modulo = 5;
+
+            navegador1.IPkId_Aplicacion = id_aplicacion;
+            navegador1.IPkId_Modulo = id_modulo;
+            navegador1.configurarDataGridView(config);
+            navegador1.SNombreTabla = columnas[0];
+            navegador1.SAlias = columnas;
+            navegador1.SEtiquetas = sEtiquetas;
+            navegador1.mostrarDatos();
+        }
+    }
+}
