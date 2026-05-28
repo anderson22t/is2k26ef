@@ -104,7 +104,7 @@ namespace Capa_Vista_Logista
             };
             Dictionary<int, ToolStripMenuItem> mapaReportes = new Dictionary<int, ToolStripMenuItem>
             {
-                {803, componenteReportesToolStripMenuItem}
+                {800, componenteReportesToolStripMenuItem}
             };
 
 
@@ -164,7 +164,6 @@ namespace Capa_Vista_Logista
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Frm_LOGIN login = new Frm_LOGIN();
             login.ShowDialog();
             this.Close();
@@ -172,59 +171,44 @@ namespace Capa_Vista_Logista
 
         private void componenteReportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Frm_Reportes reportes = new Frm_Reportes();
             reportes.ShowDialog();
-            this.Close();
         }
 
         private void consultaBitácoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Frm_Bitacora bitacora = new Frm_Bitacora();
             bitacora.ShowDialog();
-            this.Close();
         }
 
         private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Frm_cambiar_contrasena contrasena = new Frm_cambiar_contrasena(Cls_Usuario_Conectado.iIdUsuario);
             contrasena.ShowDialog();
-            this.Close();
-
         }
 
         private void crearUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Frm_Usuario usuario = new Frm_Usuario();
             usuario.ShowDialog();
-            this.Close();
         }
 
         private void asignaciónPermisoAplicaciónAUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Frm_asignacion_aplicacion_usuario aplicacion = new Frm_asignacion_aplicacion_usuario();
             aplicacion.ShowDialog();
-            this.Close();
         }
 
         private void mantenimientoAplicacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             FrmAplicacion crearAplicacion = new FrmAplicacion();
             crearAplicacion.ShowDialog();
-            this.Close();
         }
 
         private void mantenimientoFacultadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide(); 
             Frm_Facultades facultades = new Frm_Facultades();
             facultades.ShowDialog();
-            this.Close();
         }
     }
 }

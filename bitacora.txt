@@ -1,0 +1,11 @@
+commit 3bbb511c862d89e06f1659c2d8ab68cdf776cca7
+Author: Anderson <atriguerosm3@miumg.edu.gt>
+Date:   Thu May 28 11:21:33 2026 -0600
+
+    Creación mantenimiento
+
+commit 9b0d56ea3e38185757939f82be9191886490ada6
+Author: Anderson <atriguerosm3@miumg.edu.gt>
+Date:   Thu May 28 10:11:47 2026 -0600
+
+    Creación y referencia de seguridad en mdi
